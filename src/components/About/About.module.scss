@@ -1,0 +1,12 @@
+@import '@styles/_theme.scss';
+
+#about {
+  position: absolute;
+  top: 100vh;
+  height: $footerHeight;
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $textAlternate;
+}

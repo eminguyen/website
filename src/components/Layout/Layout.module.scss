@@ -1,0 +1,11 @@
+@import '@styles/_theme.scss';
+
+.page-wrapper {
+  min-height: 100vh;
+}
+
+.content-container {
+  margin: 0 auto;
+  max-width: 90%;
+  min-height: calc(100vh - #{$headerHeight} - #{$footerHeight});
+}

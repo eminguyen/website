@@ -1,0 +1,68 @@
+@import '@styles/_theme.scss';
+
+.header {
+  align-items: center;
+  display: flex;
+  height: $headerHeight;
+  justify-content: center;
+  position: fixed;
+  width: 100vw;
+  background-color: white;
+
+  .menu {
+    width: 40%;
+    height: $headerHeight;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 5%;
+
+    .menu-item {
+      color: $colorPrimary;
+      justify-content: flex-end;
+      position: relative;
+      text-align: center;
+      width: 20%;
+
+      &:after {
+        content: '';
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        -moz-border-radius: 7.5px;
+        -webkit-border-radius: 7.5px;
+        border-radius: 7.5px;
+        border-style: solid;
+        border-color: currentColor;
+        position: absolute;
+        left: 50%;
+        top: 40px;
+        margin-left: -7.5px;
+        background-color: $bg-white;
+      }
+
+      &:hover {
+
+        &:after {
+          background-color: currentColor;
+        }
+      }
+    }
+  }
+
+  hr {
+    border-top: 1px solid $text-black;
+    opacity: 0.2;
+    position: relative;
+    // This is calculated by taking 90% (width of menu) and subtracting 20%
+    // (distance from right of first ball)
+    width: 82%;
+    top: 47.5px;
+    z-index: -1;
+  }
+}
+
+.title {
+  margin: 0;
+}

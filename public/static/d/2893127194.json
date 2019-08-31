@@ -1,0 +1,1 @@
+{"errors":[{"message":"Cannot query field \"greet\" on type \"JavascriptFrontmatterFrontmatterStaticData\".","locations":[{"line":13,"column":13}]}]}

@@ -1,0 +1,14 @@
+@import '@styles/_theme.scss';
+
+.footer {
+  height: 1000vh;
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $textAlternate;
+}
+
+.link {
+  color: $colorPrimary;
+}

@@ -1,0 +1,33 @@
+@import '@styles/_theme.scss';
+@import '@styles/_mixins.scss';
+
+html {
+  // add site level custom font here, if applicable
+  font-family: 'Nunito', 'sans-serif';
+  @include smooth-font;
+  @include font-size-reset;
+  color: $textPrimary;
+  background-color: $colorBG;
+}
+
+body {
+  // add site level custom font here, if applicable
+  font-family: 'Nunito', 'sans-serif';
+  @include smooth-font;
+  @include font-size-reset;
+  color: $textPrimary;
+  line-height: 1.6;
+  background-color: $colorBG;
+}
+
+a {
+  color: $text-black;
+  text-decoration: none;
+}
+
+// markdown override
+div p img {
+  display: block;
+  margin: auto;
+  max-width: 75%;
+}
