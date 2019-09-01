@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import styles from './Header.module.scss';
+
 import logo from '../../images/logo.svg';
+import styles from './Header.module.scss';
 import { getPosition } from '../../utils/header.js';
 
 class Header extends React.Component {
@@ -24,12 +25,20 @@ class Header extends React.Component {
   handleScroll() {
     let activeElement = false;
 
+    if(window.scrollY > window.innerHeight) {
+      document.getElementsByClassName(styles.header)[0].style.backgroundColor = 'white';
+      document.getElementsByClassName(styles.menu)[0].style.backgroundColor = 'white';
+    }
+    else {
+      document.getElementsByClassName(styles.header)[0].style.backgroundColor = '#FAFAFA';
+      document.getElementsByClassName(styles.menu)[0].style.backgroundColor = '#FAFAFA';
+    }
+
     this.props.listItems.forEach((value,i) => {
       let element = document.getElementById(value.link.substring(1));
       if(element) {
         if(getPosition(element).y <= 0){
-          console.log(element);
-            activeElement = value.link;
+          activeElement = value.link;
         }
       }
     });
@@ -41,8 +50,10 @@ class Header extends React.Component {
   render() {
     return (
       <header className={styles.header}>
-        <img alt="well this was supposed to be my logo"
-          className={styles.logo} src={logo}/>
+        <a href="/#">
+          <img alt="well this was supposed to be my logo"
+            className={styles.logo} src={logo}/>
+        </a>
         <div className={styles.menu}>
           {
             this.props.listItems.map(item => {
