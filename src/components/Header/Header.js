@@ -1,34 +1,69 @@
-import PropTypes from 'prop-types'
-import React from 'react'
-import { Link } from 'gatsby'
-import styles from './Header.module.scss'
+import PropTypes from 'prop-types';
+import React from 'react';
+import styles from './Header.module.scss';
+import logo from '../../images/logo.svg';
+import { getPosition } from '../../utils/header.js';
 
-const Header = ({ showHome }) => (
-  <header className={styles.header}>
-    <img src= "../images/logo.svg"/>
-    <div className={styles.menu}>
-      <div className={styles.menuItem}>
-        <Link to="/#about">about</Link>
-      </div>
-      <div className={styles.menuItem}>
-        <Link to="/#experience">experience</Link>
-      </div>
-      <div className={styles.menuItem}>
-        <Link to="/#about">projects</Link>
-      </div>
-      <div className={styles.menuItem}>
-        <Link to="/#about">list</Link>
-      </div>
-      <div className={styles.menuItem}>
-        <Link to="/#about">contact</Link>
-      </div>
-    </div>
-    <hr/>
-  </header>
-)
+class Header extends React.Component {
 
-Header.propTypes = {
-  siteMetadata: PropTypes.object,
+  constructor(props) {
+    super(props);
+    this.state = {activeElement: null};
+    this.handleScroll = this.handleScroll.bind(this);
+  }
+
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll);
+    this.handleScroll();
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
+  }
+
+  handleScroll() {
+    let activeElement = false;
+
+    this.props.listItems.forEach((value,i) => {
+      let element = document.getElementById(value.link.substring(1));
+      if(element) {
+        if(getPosition(element).y <= 0){
+          console.log(element);
+            activeElement = value.link;
+        }
+      }
+    });
+    this.setState({
+      activeElement: activeElement
+    });
+  }
+
+  render() {
+    return (
+      <header className={styles.header}>
+        <img alt="well this was supposed to be my logo"
+          className={styles.logo} src={logo}/>
+        <div className={styles.menu}>
+          {
+            this.props.listItems.map(item => {
+              return (
+                <div className={styles.menuItem  + ' ' +
+                  (this.state.activeElement === item.link ? styles.active: '')}
+                  key={item.link}>
+                  <a href={item.link}>{item.name}</a>
+                </div>
+              )
+            })
+          }
+        </div>
+        <hr/>
+      </header>
+    )
+  }
 }
 
-export default Header
+Header.propTypes = {
+  listItems: PropTypes.array.isRequired
+}
+
+export default Header;

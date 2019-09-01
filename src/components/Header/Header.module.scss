@@ -1,22 +1,47 @@
 @import '@styles/_theme.scss';
+@import '@styles/_breakpoints.scss';
 
 .header {
   align-items: center;
+  background-color: white;
   display: flex;
   height: $headerHeight;
   justify-content: center;
+  margin: 0 5%;
   position: fixed;
-  width: 100vw;
-  background-color: white;
+  width: 90%;
+
+  .logo {
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+
+    @include breakpoint-large-up {
+      left: 0;
+      top: $headerHeight / 2;
+    }
+  }
+
+  .active {
+    &:after {
+      background-color: $colorPrimary !important;
+    }
+  }
 
   .menu {
-    width: 40%;
+    align-items: center;
+    background-color: white;
+    display: flex;
     height: $headerHeight;
     font-size: 1rem;
-    display: flex;
-    align-items: center;
     position: absolute;
-    right: 5%;
+    top: 50%;
+    width: 100%;
+    @include breakpoint-large-up {
+      right: 0;
+      top: 0;
+      width: 50%;
+    }
 
     .menu-item {
       color: $colorPrimary;
@@ -26,24 +51,23 @@
       width: 20%;
 
       &:after {
-        content: '';
-        display: inline-block;
-        width: 15px;
-        height: 15px;
         -moz-border-radius: 7.5px;
         -webkit-border-radius: 7.5px;
+        background-color: $bg-white;
         border-radius: 7.5px;
         border-style: solid;
         border-color: currentColor;
-        position: absolute;
+        content: '';
+        display: inline-block;
+        height: 15px;
         left: 50%;
-        top: 40px;
         margin-left: -7.5px;
-        background-color: $bg-white;
+        position: absolute;
+        top: 40px;
+        width: 15px;
       }
 
       &:hover {
-
         &:after {
           background-color: currentColor;
         }
@@ -54,15 +78,16 @@
   hr {
     border-top: 1px solid $text-black;
     opacity: 0.2;
-    position: relative;
-    // This is calculated by taking 90% (width of menu) and subtracting 20%
-    // (distance from right of first ball)
-    width: 82%;
-    top: 47.5px;
+    position: absolute;
+    width: 80%;
+    // This is calculated by taking the distance from the top of the menu
+    // And then tacking on the offset of the menu-item:after content minus half
+    // of its size.
+    top: calc(100% + 33.5px);
     z-index: -1;
+    @include breakpoint-large-up {
+      top: calc(50% + 33.5px);
+      width: 90%;
+    }
   }
-}
-
-.title {
-  margin: 0;
 }
