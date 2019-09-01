@@ -26,12 +26,12 @@ class Header extends React.Component {
     let activeElement = false;
 
     if(window.scrollY > window.innerHeight) {
-      document.getElementsByClassName(styles.header)[0].style.backgroundColor = 'white';
-      document.getElementsByClassName(styles.menu)[0].style.backgroundColor = 'white';
+      document.getElementsByClassName(styles.header)[0].style.backgroundColor = '#FFFFFF';
+      document.getElementsByClassName(styles.menu)[0].style.backgroundColor = '#FFFFFF';
     }
     else {
-      document.getElementsByClassName(styles.header)[0].style.backgroundColor = '#FAFAFA';
-      document.getElementsByClassName(styles.menu)[0].style.backgroundColor = '#FAFAFA';
+      document.getElementsByClassName(styles.header)[0].style.backgroundColor = 'rgba(0,0,0,0)';
+      document.getElementsByClassName(styles.menu)[0].style.backgroundColor = 'rgba(0,0,0,0)';
     }
 
     this.props.listItems.forEach((value,i) => {

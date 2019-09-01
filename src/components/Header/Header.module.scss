@@ -3,12 +3,12 @@
 
 .header {
   align-items: center;
-  background-color: $bg-white;
+  background-color: $bg-grey;
   display: flex;
   height: $headerHeight;
   justify-content: center;
+  padding-top: 10px;
   position: fixed;
-  transition: .2s;
   width: 100vw;
   z-index: 1000;
 
@@ -42,12 +42,11 @@
 
   .menu {
     align-items: center;
-    background-color: $bg-white;
+    background-color: $bg-grey;
     display: flex;
     height: $headerHeight;
     font-size: 1rem;
     position: absolute;
-    transition: .2s;
     top: 50%;
     width: 100%;
     z-index: 1000;
@@ -69,7 +68,7 @@
       &:after {
         -moz-border-radius: 7.5px;
         -webkit-border-radius: 7.5px;
-        background-color: $bg-white;
+        background-color: $bg-grey;
         border-radius: 7.5px;
         border-style: solid;
         border-color: currentColor;
