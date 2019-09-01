@@ -10,7 +10,7 @@ if (typeof window !== "undefined") {
   require("smooth-scroll")('a[href*="#"]')
 }
 
-const Layout = ({ children, showHome = true }) => (
+const Layout = ({ listItems, children }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -24,7 +24,7 @@ const Layout = ({ children, showHome = true }) => (
     `}
     render={data => (
       <div className={styles.pageWrapper}>
-        <Header/>
+        <Header listItems={listItems}/>
         <div className={styles.contentContainer}>{children}</div>
         <Footer siteMetadata={data.site.siteMetadata} />
       </div>
@@ -34,6 +34,7 @@ const Layout = ({ children, showHome = true }) => (
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
+  listItems: PropTypes.array.isRequired
 }
 
 export default Layout

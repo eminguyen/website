@@ -3,13 +3,12 @@
 
 .header {
   align-items: center;
-  background-color: white;
+  background-color: $bg-white;
   display: flex;
   height: $headerHeight;
   justify-content: center;
-  margin: 0 5%;
   position: fixed;
-  width: 90%;
+  width: 100%;
 
   .logo {
     height: 100%;
@@ -17,7 +16,7 @@
     z-index: 2;
 
     @include breakpoint-large-up {
-      left: 0;
+      left: 5%;
       top: $headerHeight / 2;
     }
   }
@@ -30,7 +29,7 @@
 
   .menu {
     align-items: center;
-    background-color: white;
+    background-color: $bg-white;
     display: flex;
     height: $headerHeight;
     font-size: 1rem;
@@ -38,7 +37,7 @@
     top: 50%;
     width: 100%;
     @include breakpoint-large-up {
-      right: 0;
+      right: 5%;
       top: 0;
       width: 50%;
     }
@@ -87,7 +86,7 @@
     z-index: -1;
     @include breakpoint-large-up {
       top: calc(50% + 33.5px);
-      width: 90%;
+      width: 80%;
     }
   }
 }
