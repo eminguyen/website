@@ -3,19 +3,23 @@
 @import '@styles/_theme.scss';
 
 .about {
+  @include offset;
+
   background-color: $bg-white;
   color: $text-black;
   position: relative;
-  top: -10px;
   z-index: 500;
+
+  h1 {
+    @include title;
+  }
 
   .content {
     @include content;
-    position: relative;
-    top: calc(5rem + 10px);
 
-    h1 {
-      color: $primary-blue;
+    @include breakpoint-large-up {
+      align-items: center;
+      display: flex;
     }
 
     .text {
@@ -32,13 +36,31 @@
   .image {
     background-color: $primary-blue;
     border-radius: 50%;
-    height: 35vw;
+    box-shadow: 0 0 10px rgba(33,33,33, 0.4);
+    height: 80vw;
+    margin-bottom: 10vw;
     transition: .2s;
-    width: 35vw;
+    width: 80vw;
     z-index: 499;
 
     &:hover {
-      transform: scale(1.1);
+      transform: scale(1.05);
     }
+
+    @include breakpoint-large-up {
+      height: 38vw;
+      position: absolute;
+      right: 0;
+      width: 38vw;
+    }
+  }
+
+  .whitebar {
+    background-color: $bg-white;
+    height: 10px;
+    position: relative;
+    top: calc(-5rem - 1px);
+    width: 100%;
+    z-index: 501;
   }
 }

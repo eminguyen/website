@@ -24,7 +24,7 @@
       z-index: 1001;
 
       @include breakpoint-large-up {
-        left: 5%;
+        left: calc(5% + 4rem);
         top: $headerHeight / 2;
       }
 
@@ -103,8 +103,9 @@
     top: calc(100% + 33.5px);
     z-index: 999;
     @include breakpoint-large-up {
+      right: 10%;
       top: calc(50% + 33.5px);
-      width: 80%;
+      width: calc(80% - 4rem);
     }
   }
 }

@@ -1,12 +1,13 @@
 @import '@styles/_theme.scss';
 
 .footer {
-  height: 1000vh;
+  height: $footerHeight;
   font-size: 0.75rem;
   display: flex;
   align-items: center;
   justify-content: center;
   color: $textAlternate;
+  text-align: center;
 }
 
 .link {

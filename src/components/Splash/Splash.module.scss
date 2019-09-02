@@ -7,9 +7,10 @@
   width: 100vw;
 
   svg {
-    filter: drop-shadow(0 -10px 10px rgba(33,33,33, 0.2));
+    filter: drop-shadow(0 -5px 8px rgba(33,33,33, 0.2));
     position: absolute;
     bottom: 0;
+    pointer-events: none;
     width: 100%;
     height: auto;
   }

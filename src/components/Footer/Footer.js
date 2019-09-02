@@ -4,14 +4,10 @@ import styles from './Footer.module.scss'
 
 const Footer = ({ siteMetadata }) => (
   <footer className={styles.footer}>
-    <div>
+    <div id="experience">
       <span>Made with Yerba and Love by </span>
-      <a
-        className={styles.link}
-        target="blank"
-      >
-        {siteMetadata.fullName}
-      </a>
+      {siteMetadata.fullName}.
+      <div> Source code here. </div>
     </div>
   </footer>
 )
