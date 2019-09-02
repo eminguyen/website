@@ -1,5 +1,4 @@
 import React from 'react';
-import '../utils/jquery-global.js';
 import Layout from '@components/Layout';
 import About from '@components/About';
 import Splash from '@components/Splash';
