@@ -23,13 +23,6 @@ module.exports = {
         path: `${__dirname}/src/data`,
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `blog`,
-        path: `${__dirname}/src/blog/`,
-      },
-    },
     // loading static data through GraphQL query
     `gatsby-transformer-javascript-frontmatter`,
     `gatsby-transformer-sharp`,
