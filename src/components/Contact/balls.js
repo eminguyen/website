@@ -205,7 +205,7 @@ stage.height = stageHeight;
 		while(--i > -1)
 		{
 			var image = document.createElement('img');
-			image.src = balls[i].image;
+			image.src = balls[i].image || '';
 
 			context.save();
 			context.fillStyle = balls[i].color;
