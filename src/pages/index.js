@@ -1,8 +1,9 @@
-import React from 'react'
-import Layout from '@components/Layout'
+import React from 'react';
+import '../utils/jquery-global.js';
+import Layout from '@components/Layout';
 import About from '@components/About';
 import Splash from '@components/Splash';
-import Experience from '@components/Experience';
+import Work from '@components/Work';
 
 const listItems = [
   { link: '#about', name: 'about' },
@@ -16,7 +17,7 @@ const IndexPage = ({ data }) => (
   <Layout listItems={listItems}>
     <Splash />
     <About />
-    <Experience/>
+    <Work />
   </Layout>
 )
 

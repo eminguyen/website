@@ -1,0 +1,40 @@
+@import '@styles/_breakpoints.scss';
+@import '@styles/_mixins.scss';
+@import '@styles/_theme.scss';
+
+.work {
+  @include offset;
+  min-height: 100vh;
+
+  margin-top: 100px;
+
+  h1 {
+    @include title;
+  }
+
+  .content {
+    @include content;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+      left: 0;
+      position: absolute;
+    }
+
+    .description {
+      max-height: 40vw;
+      width: 100%;
+      flex: 1 0 100%;
+      text-align: center;
+      @include breakpoint-large-up {
+        margin-left: 10%;
+        max-width: 40%;
+        flex: 1 0 50%;
+        text-align: left;
+      }
+    }
+  }
+}

@@ -11,9 +11,21 @@
 
 @mixin content {
   margin: 0 10%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: relative;
+}
+
+@mixin offset {
+  padding-top: 5rem;
+}
+
+@mixin title {
+  color: $primary-blue;
+  text-align: center;
+
+  @include breakpoint-large-up {
+    margin-left: 10%;
+    text-align: left;
+  }
 }
 
 @mixin smooth-font {
