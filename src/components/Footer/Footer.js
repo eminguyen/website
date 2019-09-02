@@ -6,8 +6,7 @@ const Footer = ({ siteMetadata }) => (
   <footer className={styles.footer}>
     <div id="experience">
       <span>Made with Yerba and Love by </span>
-      {siteMetadata.fullName}.
-      <div> Source code here. </div>
+      <span className={styles.name}>{siteMetadata.fullName}.</span>
     </div>
   </footer>
 )

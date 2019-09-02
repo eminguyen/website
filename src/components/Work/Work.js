@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import React from 'react';
 
 import styles from './Work.module.scss';
@@ -59,7 +58,7 @@ class Work extends React.Component {
                 Founding President
               </div>
               <div className="CirItem CirItem3">
-                IEEE
+                IEEE UC San Diego
                 <br />
                 Vice Chair External
               </div>

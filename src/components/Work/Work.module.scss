@@ -14,9 +14,9 @@
 
   .content {
     @include content;
+    align-items: center;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
     justify-content: center;
 
     h1 {
@@ -25,10 +25,11 @@
     }
 
     .description {
-      max-height: 40vw;
-      width: 100%;
       flex: 1 0 100%;
+      max-height: 40vw;
       text-align: center;
+      width: 100%;
+
       @include breakpoint-large-up {
         margin-left: 10%;
         max-width: 40%;

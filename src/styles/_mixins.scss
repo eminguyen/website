@@ -46,3 +46,13 @@
     font-size: 17px;
   }
 }
+
+@mixin background($url) {
+  background-image: url($url);
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: 50%;
+  -moz-background-size: 50%;
+  -o-background-size: 50%;
+  background-size: 50%;
+}

@@ -37,6 +37,7 @@
       text-align: center;
       text-decoration: none;
       transition: all 0.3s ease;
+      -webkit-tap-highlight-color:  rgba(255, 255, 255, 0);
       width: 40%;
 
       &:focus {
@@ -58,7 +59,7 @@
       	width: 100.1%;
         height: 100%;
       	left:-200%;
-        transition: all .6s ease;
+        transition: all .5s ease;
       	background-color: $primary-blue;
       }
 

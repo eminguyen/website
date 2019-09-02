@@ -1,0 +1,51 @@
+@import '@styles/_mixins.scss';
+@import '@styles/_theme.scss';
+
+.contact {
+  cursor: pointer;
+  min-height: 100px;
+  -webkit-tap-highlight-color:  rgba(255, 255, 255, 0);
+  width: 100%;
+
+  canvas {
+    height: 100%;
+    position: relative;
+    z-index: 101;
+  }
+
+  .mcontainer {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 25%;
+    width: 50%;
+
+    .mcontact {
+      background-color: $primary-blue;
+      border-radius: 100%;
+      display: inline-block;
+      height: 50px;
+      width: 50px;
+    }
+
+    // Idk why a mixin here doesn't work
+    .github {
+      @include background('/static/icons/github.png');
+    }
+
+    .linkedin {
+      @include background('/static/icons/linkedin.png');
+    }
+
+    .facebook {
+      @include background('/static/icons/facebook.png');
+    }
+
+    .instagram {
+      @include background('/static/icons/instagram.png');
+    }
+
+    .medium {
+      @include background('/static/icons/medium.png');
+    }
+  }
+}
