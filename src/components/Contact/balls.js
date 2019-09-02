@@ -2,6 +2,8 @@
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
  // some code..
 } else {*/
+
+let initBalls = null;
 if (typeof window !== undefined) {
   var browserX = window.screenX;
   var browserY = window.screenY;
@@ -17,7 +19,7 @@ if (typeof window !== undefined) {
   var IE = document.all ? true : false;
   var stage = null;
 
-  export const initBalls = () => {
+  initBalls = () => {
   stage = document.getElementById('stage');
   stage.width = stageWidth;
   stage.height = stageHeight;
@@ -347,5 +349,7 @@ if (typeof window !== undefined) {
   			return true;
   	}
 }
+
+export {initBalls};
 //}
 //});
