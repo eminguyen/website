@@ -1,7 +1,12 @@
-import PropTypes from 'prop-types'
-import React from 'react'
-import styles from './About.module.scss'
-import { StaticQuery, graphql } from 'gatsby'
+import PropTypes from 'prop-types';
+import React from 'react';
+import styles from './About.module.scss';
+import { StaticQuery, graphql } from 'gatsby';
+
+const returnFalse = (e) => {
+  e.preventDefault();
+  return false;
+}
 
 const About = ( { id }) => (
   <div className={styles.about} id="about">
@@ -27,10 +32,18 @@ const About = ( { id }) => (
         <br/>  <br/>
         I’m always seeking new opportunities. If you&#39;d like to work together, I
         accept payment in the forms of money and Korean BBQ.</p>
+        <form>
+          <a href="mailto:emily@computer.org">
+            Email
+            <div className={styles.layer}>emily@computer.org</div>
+          </a>
+          <a href="/static/Emily_Nguyen_Resume.pdf">
+            Resume
+            <div className={styles.layer}>It&#39;s a PDF!</div>
+          </a>
+        </form>
       </div>
     </div>
-    <button>✉️ at emily@computer.org</button>
-    <button>Download Resume</button>
   </div>
 )
 

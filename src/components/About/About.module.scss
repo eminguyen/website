@@ -22,6 +22,55 @@
       display: flex;
     }
 
+    a {
+      background: white;
+      border: 1px solid $primary-blue;
+      border-radius: 25px;
+      cursor: pointer;
+      display: inline-block;
+      font-size: 1rem;
+      height: 50px;
+      margin: 0 5%;
+      overflow: hidden;
+      position: relative;
+      padding-top: calc(20px - .5rem);
+      text-align: center;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      width: 40%;
+
+      &:focus {
+        outline: none;
+      }
+
+      @include breakpoint-large-up {
+        margin-left: 0;
+      }
+
+      .layer {
+        align-items: center;
+        border-radius: 25px;
+        justify-content: center;
+      	color:#fff;
+        display: flex;
+      	position:absolute;
+      	top: 0;
+      	width: 100.1%;
+        height: 100%;
+      	left:-200%;
+        transition: all .6s ease;
+      	background-color: $primary-blue;
+      }
+
+      &:hover {
+        color: white;
+
+      	.layer {
+      		left: 0;
+      	}
+      }
+    }
+
     .text {
       text-align: center;
       width: 100%;
