@@ -13,10 +13,11 @@ var mouseY = 0;
 var stageWidth = 0;
 var stageHeight = 0;
 var context = null;
-var IE = document.all ? true : false;
+var IE = false;
 var stage = null;
 
 export const initBalls = () => {
+IE = document.all ? true : false;
 browserX = window.screenX;
 browserY = window.screenY;
 stageWidth = window.innerWidth;
