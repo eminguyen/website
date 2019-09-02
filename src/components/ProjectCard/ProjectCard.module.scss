@@ -1,0 +1,87 @@
+@import '@styles/_mixins.scss';
+@import '@styles/_theme.scss';
+
+.projectcard {
+  background-color: $bg-grey;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(33,33,33,0.2);
+  flex: 0 0 70%;
+  height: 43.75vw;
+  margin-top: 50px;
+  overflow: hidden;
+  position: relative;
+  transition: transform .5s, filter .2s;
+
+  &:hover {
+    transform: scale(1.02);
+  }
+
+  a {
+    background-color: $primary-blue;
+    border-radius: 100%;
+    box-shadow: 0 0 10px rgba(33,33,33,0.2);
+    height: 5vw;
+    width: 5vw;
+    transition: .5s;
+    pointer-events: auto;
+  }
+
+  .background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: .2s;
+
+    &:hover {
+      filter: none !important;
+    }
+  }
+
+  .link {
+    @include background('/static/icons/link.png');
+  }
+
+  .github {
+    @include background('/static/icons/github.png');
+  }
+
+  .links {
+    align-items: center;
+    bottom: 5vw;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 20%;
+    position: absolute;
+    width: 60%;
+    pointer-events: none;
+  }
+
+  .text {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(33,33,33,0.2);
+    top: 5%;
+    width: 40%;
+    margin: 0 30%;
+    padding: 10px;
+    position: absolute;
+    pointer-events: none;
+    text-align: center;
+    z-index: 101;
+
+    h3 {
+      color: $primary-blue;
+      margin-bottom: 10px;
+    }
+
+    h5 {
+      opacity: .8;
+      margin-bottom: 5px;
+      line-height: 1rem;
+    }
+  }
+}

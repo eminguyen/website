@@ -1,5 +1,5 @@
-@import '@styles/_theme.scss';
 @import '@styles/_mixins.scss';
+@import '@styles/_theme.scss';
 
 html {
   // add site level custom font here, if applicable
@@ -23,7 +23,7 @@ body {
 a {
   color: $text-black;
   text-decoration: none;
-  
+
   &:focus {
     outline: none !important;
   }

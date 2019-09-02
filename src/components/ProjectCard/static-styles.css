@@ -1,0 +1,19 @@
+#roadblock {
+  background-image: url('/static/projects/roadblock.png');
+  background-size: cover;
+  background-position: center center;
+  filter: grayscale(100%) brightness(120%) sepia(30%) hue-rotate(165deg);
+}
+
+#acmurl {
+  background-image: url('/static/projects/acmurl.png');
+  background-size: cover;
+  background-position: center center;
+  filter: grayscale(100%) brightness(120%) sepia(30%) hue-rotate(165deg);
+}
+
+#comingsoon {
+  background-image: url('/static/projects/coming-soon.png');
+  background-size: cover;
+  background-position: center center;
+}
