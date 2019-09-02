@@ -1,22 +1,26 @@
-/*$(document.defaultView).on('load', function() {
+/*$(window).on('load', function() {
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
  // some code..
 } else {*/
-var browserX = document.defaultView.screenX;
-var browserY = document.defaultView.screenY;
+var browserX = 0;
+var browserY = 0;
 var balls = [];
 let colors = null;
 var total = 20;
 var currentDrag = null;
 var mouseX = 0;
 var mouseY = 0;
-var stageWidth = document.defaultView.innerWidth;
-var stageHeight = document.defaultView.innerHeight;
+var stageWidth = 0;
+var stageHeight = 0;
 var context = null;
 var IE = document.all ? true : false;
 var stage = null;
 
 export const initBalls = () => {
+browserX = window.screenX;
+browserY = window.screenY;
+stageWidth = window.innerWidth;
+stageHeight = window.innerHeight;
 stage = document.getElementById('stage');
 stage.width = stageWidth;
 stage.height = stageHeight;
@@ -24,10 +28,10 @@ stage.height = stageHeight;
 	if(!IE) document.addEventListener(Event.MOUSEMOVE, getMouseXY, false);
 	//document.onmousemove = getMouseXY;
 
-	document.defaultView.onresize = function(event)
+	window.onresize = function(event)
 	{
-		stageWidth = document.defaultView.innerWidth;
-		stageHeight = document.defaultView.innerHeight;
+		stageWidth = window.innerWidth;
+		stageHeight = window.innerHeight;
 		stage.width = stageWidth;
 		stage.height = stageHeight;
 	}
@@ -91,7 +95,7 @@ stage.height = stageHeight;
       return;
     }
 		if(currentDrag.link) {
-		  document.defaultView.location.href = currentDrag.link;
+		  window.location.href = currentDrag.link;
 		}
 		if(currentDrag !== null) currentDrag.dragging = false;
 	}
@@ -168,14 +172,14 @@ stage.height = stageHeight;
 
 	function render()
 	{
-		var isChange = (browserX !== document.defaultView.screenX || browserY !== document.defaultView.screenY);
+		var isChange = (browserX !== window.screenX || browserY !== window.screenY);
 		if(isChange)
 		{
-			var diffX = browserX - document.defaultView.screenX;
-			browserX = document.defaultView.screenX;
+			var diffX = browserX - window.screenX;
+			browserX = window.screenX;
 
-			var diffY = browserY - document.defaultView.screenY;
-			browserY = document.defaultView.screenY;
+			var diffY = browserY - window.screenY;
+			browserY = window.screenY;
 		}
 
 		var j = balls.length;
