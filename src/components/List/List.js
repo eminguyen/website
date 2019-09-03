@@ -24,7 +24,7 @@ class List extends React.Component {
         </p>
         <div className={styles.selectedItem}>
           <div className={styles.selectedItemCenter}>
-            <img className={styles.selectedImage} id="listImage" src="http://placekitten.com/200/300"/>
+            <img className={styles.selectedImage} id="listImage"/>
             <p id="listContent">
              If you&#39;re seeing this there&#39;s a glitch in the matrix.
             </p>
