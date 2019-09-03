@@ -7,11 +7,14 @@
   border-radius: 20px;
   box-shadow: 0 0 10px rgba(33,33,33, 0.4);
   flex: 0 0 70%;
-  height: 43.75vw;
+  height: 300px;
   margin-top: 50px;
   overflow: hidden;
   position: relative;
   transition: transform .5s, filter .2s;
+  @include breakpoint-large-up {
+    height: 43.75vw;
+  }
 
   &:hover {
     transform: scale(1.02);
@@ -21,10 +24,14 @@
     background-color: $primary-blue;
     border-radius: 100%;
     box-shadow: 0 0 10px rgba(33,33,33, 0.4);
-    height: 5vw;
-    width: 5vw;
+    height: 50px;
+    width: 50px;
     transition: .5s;
     pointer-events: auto;
+    @include breakpoint-large-up {
+      height: 5vw;
+      width: 5vw;
+    }
   }
 
   .background {

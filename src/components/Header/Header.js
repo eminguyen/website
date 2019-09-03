@@ -34,14 +34,19 @@ class Header extends React.Component {
       document.getElementsByClassName(styles.menu)[0].style.backgroundColor = 'rgba(0,0,0,0)';
     }
 
-    this.props.listItems.forEach((value,i) => {
-      let element = document.getElementById(value.link.substring(1));
-      if(element) {
-        if(getPosition(element).y <= 0){
-          activeElement = value.link;
+    if((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+      activeElement = this.props.listItems[this.props.listItems.length - 1].link;
+    }
+    else {
+      this.props.listItems.forEach((value,i) => {
+        let element = document.getElementById(value.link.substring(1));
+        if(element) {
+          if(getPosition(element).y <= 0){
+            activeElement = value.link;
+          }
         }
-      }
-    });
+      });
+    }
     this.setState({
       activeElement: activeElement
     });

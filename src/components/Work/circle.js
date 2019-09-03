@@ -1,4 +1,5 @@
 let i = 5;
+let rounds = 0;
 let interval, timeout;
 
 export const initCircle = function() {
@@ -32,6 +33,7 @@ export const initCircle = function() {
 export const handleClick = function(event) {
 
   let dataTab= event.currentTarget.getAttribute('data-tab');
+  let previousDataTab = document.getElementsByClassName('itemDot active')[0].getAttribute('data-tab');
   document.getElementsByClassName('itemDot active')[0].classList.remove('active');
 	event.currentTarget.classList.add('active');
   document.getElementsByClassName('CirItem active')[0].classList.remove('active');
@@ -39,15 +41,24 @@ export const handleClick = function(event) {
   document.getElementsByClassName('text active')[0].classList.remove('active');
   document.getElementsByClassName('text' + dataTab)[0].classList.add('active');
 	i=dataTab;
+  const rotate = dataTab - previousDataTab;
+  if(Math.abs(rotate) >= 3 ) {
+    if(rotate < 0) {
+      rounds -= 1;
+    }
+    else {
+      rounds += 1;
+    }
+  }
 
   const dotCircles = document.getElementsByClassName('dotCircle');
   for (let item of dotCircles) {
-    item.style.transform = "rotate("+(360-(i-1)*60)+"deg)";
+    item.style.transform = "rotate("+(360-(i-1)*60 + 360*rounds)+"deg)";
   }
 
   const itemDots = document.getElementsByClassName('itemDot');
   for (let item of itemDots) {
-    item.style.transform = "rotate("+((i-1)*60)+"deg)";
+    item.style.transform = "rotate("+((i-1)*60 - 360*rounds)+"deg)";
   }
   if(timeout) {
     clearTimeout(timeout);
@@ -64,6 +75,7 @@ const autoSpin = function () {
     if(dataTab < 1 || i < 1) {
       dataTab = 6;
       i = 6;
+      rounds += 1;
     }
 
     document.getElementsByClassName('itemDot active')[0].classList.remove('active');
@@ -76,13 +88,15 @@ const autoSpin = function () {
 
     const dotCircles = document.getElementsByClassName('dotCircle');
     for (let item of dotCircles) {
-      item.style.transform = "rotate("+(360-(i)*60)+"deg)";
+      item.style.transform = "rotate("+(360-(i)*60 + 360*rounds)+"deg)";
     }
 
     const itemDots = document.getElementsByClassName('itemDot');
     for (let item of itemDots) {
-      item.style.transform = "rotate("+((i)*60)+"deg)";
+      item.style.transform = "rotate("+((i)*60 - 360*rounds)+"deg)";
     }
+
+    console.log(rounds)
 
   }, 5000);
 }

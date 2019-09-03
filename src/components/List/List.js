@@ -79,7 +79,7 @@ class List extends React.Component {
               <div>Hike the Pacific Crest Trail</div>
               <div>See the Northern Lights</div>
               <div>Devour a portion of poutine in Montreal</div>
-              <div>Celebrate La Dia Del Los Muertos</div>
+              <div>Celebrate La Dia De Los Muertos</div>
               <div>Go flyboarding in Cancun</div>
               <div>Zipline in Puerto Rico</div>
               <div>Volcano board in Nicaragua</div>

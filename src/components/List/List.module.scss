@@ -8,12 +8,12 @@
   overflow: -moz-scrollbars-none;
   -ms-overflow-style: none;
   ::-webkit-scrollbar { width: 0 !important };
-  margin-top: 10vw;
+  margin-top: 15vw;
   top: 0;
 
   .description {
     width: 80%;
-    margin: 0 10% 50px 10%;
+    margin: 0 10% 100px 10%;
   }
 
   h1 {
@@ -130,24 +130,32 @@
     align-items: center;
     justify-content: center;
     height: 500px;
+    width: 80%;
+    margin: 0 10%;
 
     @include breakpoint-large-up {
       position: absolute;
       flex: 0 0 40%;
       width: 40%;
       right: 10%;
+      margin: 0;
     }
 
     .selected-image {
       border: 10px solid $primary-blue;
-      height: 300px;
-      width: 300px;
+      height: 80vw;
+      width: 80vw;
       background-color: $primary-blue;
       -webkit-border-radius: 50%;
       -moz-border-radius: 50%;
       border-radius: 50%;
       box-shadow: 0 0 10px rgba(33,33,33, 0.4);
       transition: .3s;
+
+      @include breakpoint-large-up {
+        height: 300px;
+        width: 300px;
+      }
 
       &:hover {
         transform: scale(1.05);

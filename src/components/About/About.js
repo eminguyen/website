@@ -16,18 +16,18 @@ const About = ( { id }) => (
       <div className={styles.image}></div>
       <div className={styles.text}>
         <p>But you can call me Emi. When I was younger, I was
-        called Antony but things change. What hasn’t changed is my love for
+        called Antony but things change. What hasn't changed is my love for
         computers. My parents sacrificed most of their savings so that I could have
-        a PC at age 3.   Now, I’m a software engineer who wants to pay it forward by
+        a PC at age 3.   Now, I'm a software engineer who wants to pay it forward by
         providing others with opportunities to code.
-        I aim to combine my love of the web with my eye for  design in order to
+        I aim to combine my love of the web with my eye for design in order to
         create beautiful applications and helpful tools. Aside from that, I also
         spend my time teaching Java at local high schools, facilitating engineering summer camps,
         organizing STEM fairs, and hosting web development workshops. In my spare time, I like to climb
         League duo queue with my cousin and down gallons of boba with my best friends.
         I also often drive hundreds of miles to spend time with my siblings
         and I run thousands more to explore new places. To compensate for
-        the damage to my feet, you&#39;ll often find me
+        the damage to my feet, you'll often find me
         flexing on other people with my Crocs and Heelys.
         <br/>  <br/>
         I’m always seeking new opportunities. If you&#39;d like to work together, I
