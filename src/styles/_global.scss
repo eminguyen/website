@@ -8,6 +8,8 @@ html {
   @include font-size-reset;
   color: $textPrimary;
   background-color: $colorBG;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -18,6 +20,8 @@ body {
   color: $textPrimary;
   line-height: 1.6;
   background-color: $colorBG;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 a {
