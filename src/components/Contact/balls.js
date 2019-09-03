@@ -21,7 +21,7 @@ IE = document.all ? true : false;
 browserX = window.screenX;
 browserY = window.screenY;
 stageWidth = window.innerWidth;
-stageHeight = window.innerHeight;
+stageHeight = window.innerHeight * .75;
 stage = document.getElementById('stage');
 stage.width = stageWidth;
 stage.height = stageHeight;
@@ -32,7 +32,7 @@ stage.height = stageHeight;
 	window.onresize = function(event)
 	{
 		stageWidth = window.innerWidth;
-		stageHeight = window.innerHeight;
+		stageHeight = window.innerHeight *.75;
 		stage.width = stageWidth;
 		stage.height = stageHeight;
 	}

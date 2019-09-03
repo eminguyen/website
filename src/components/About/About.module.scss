@@ -3,10 +3,9 @@
 @import '@styles/_theme.scss';
 
 .about {
-  @include offset;
-
   background-color: $bg-white;
   color: $text-black;
+  padding-top: 6rem;
   position: relative;
   z-index: 500;
 

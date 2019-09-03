@@ -16,6 +16,8 @@
 
 @mixin offset {
   padding-top: 6rem;
+  position: relative;
+  top: 10vw;
 }
 
 @mixin title {

@@ -2,6 +2,7 @@ import React from 'react';
 import About from '@components/About';
 import Contact from '@components/Contact';
 import Layout from '@components/Layout';
+import List from '@components/List';
 import Projects from '@components/Projects';
 import Splash from '@components/Splash';
 import Work from '@components/Work';
@@ -22,6 +23,7 @@ const IndexPage = ({ data }) => (
     <About />
     <Work />
     <Projects />
+    <List />
     <Contact />
   </Layout>
 )

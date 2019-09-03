@@ -8,6 +8,7 @@
   width: 100%;
 
   canvas {
+    cursor: grab;
     height: 100%;
     position: relative;
     z-index: 101;
@@ -16,8 +17,8 @@
   .mcontainer {
     display: flex;
     justify-content: space-evenly;
-    margin: 50px 25% 0 25%;
-    width: 50%;
+    margin: 100px 10% 0 10%;
+    width: 80%;
 
     .mcontact {
       background-color: $primary-blue;

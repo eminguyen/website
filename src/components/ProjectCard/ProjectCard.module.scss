@@ -1,10 +1,11 @@
+@import '@styles/_breakpoints.scss';
 @import '@styles/_mixins.scss';
 @import '@styles/_theme.scss';
 
 .projectcard {
   background-color: $bg-grey;
   border-radius: 20px;
-  box-shadow: 0 0 10px rgba(33,33,33,0.2);
+  box-shadow: 0 0 10px rgba(33,33,33, 0.4);
   flex: 0 0 70%;
   height: 43.75vw;
   margin-top: 50px;
@@ -19,7 +20,7 @@
   a {
     background-color: $primary-blue;
     border-radius: 100%;
-    box-shadow: 0 0 10px rgba(33,33,33,0.2);
+    box-shadow: 0 0 10px rgba(33,33,33, 0.4);
     height: 5vw;
     width: 5vw;
     transition: .5s;
@@ -65,13 +66,17 @@
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(33,33,33,0.2);
     top: 5%;
-    width: 40%;
-    margin: 0 30%;
+    width: 60%;
+    margin: 0 20%;
     padding: 10px;
     position: absolute;
     pointer-events: none;
     text-align: center;
     z-index: 101;
+    @include breakpoint-large-up {
+      width: 40%;
+      margin: 0 30%;
+    }
 
     h3 {
       color: $primary-blue;
