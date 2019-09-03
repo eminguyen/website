@@ -41,12 +41,11 @@ module.exports = {
       },
     },
     `gatsby-plugin-sass`,
-    /*
     // google-analytics
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: 'your-tracking-code',
+        trackingId: process.env.GA,
         // Puts tracking script in the head instead of the body
         head: false,
         // Setting this parameter is optional
@@ -54,6 +53,6 @@ module.exports = {
         // Setting this parameter is also optional
         respectDNT: true,
       },
-    },*/
+    },
   ],
 }
