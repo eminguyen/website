@@ -83,7 +83,9 @@
   }
 
   .image {
-    background-color: $primary-blue;
+    background: url('../../images/projects/profile.jpeg');
+    background-repeat: none;
+    background-size: cover;
     border-radius: 50%;
     box-shadow: 0 0 10px rgba(33,33,33, 0.4);
     height: 80vw;
@@ -97,10 +99,10 @@
     }
 
     @include breakpoint-large-up {
-      height: 38vw;
+      height: 30vw;
       position: absolute;
       right: 0;
-      width: 38vw;
+      width: 30vw;
     }
   }
 

@@ -3,97 +3,34 @@
 @import '@styles/_theme.scss';
 
 .projectcard {
-  background-color: $bg-grey;
-  border-radius: 20px;
-  box-shadow: 0 0 10px rgba(33,33,33, 0.4);
-  flex: 0 0 70%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border-radius: 10px;
+  cursor: pointer;
   height: 300px;
-  margin-top: 50px;
+  margin: 15px;
   overflow: hidden;
-  position: relative;
-  transition: transform .5s, filter .2s;
-  @include breakpoint-large-up {
-    height: 43.75vw;
+  transition: 0.2s;
+  width: 350px;
+
+  img {
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  p {
+    font-size: 0.8em;
+    padding: 0 10%;
+    width: 100%;
+    margin-top: 5px;
+    text-align: center;
+
+    &.title {
+      font-size: 0.9em;
+    }
   }
 
   &:hover {
-    transform: scale(1.02);
-  }
-
-  a {
-    background-color: $primary-blue;
-    border-radius: 100%;
-    box-shadow: 0 0 10px rgba(33,33,33, 0.4);
-    height: 50px;
-    width: 50px;
-    transition: .5s;
-    pointer-events: auto;
-    @include breakpoint-large-up {
-      height: 5vw;
-      width: 5vw;
-    }
-  }
-
-  .background {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    transition: .2s;
-
-    &:hover {
-      filter: none !important;
-    }
-  }
-
-  .link {
-    @include background('/static/icons/link.png');
-  }
-
-  .github {
-    @include background('/static/icons/github.png');
-  }
-
-  .links {
-    align-items: center;
-    bottom: 5vw;
-    display: flex;
-    justify-content: space-evenly;
-    margin: 0 20%;
-    position: absolute;
-    width: 60%;
-    pointer-events: none;
-  }
-
-  .text {
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(33,33,33,0.2);
-    top: 5%;
-    width: 60%;
-    margin: 0 20%;
-    padding: 10px;
-    position: absolute;
-    pointer-events: none;
-    text-align: center;
-    z-index: 101;
-    @include breakpoint-large-up {
-      width: 40%;
-      margin: 0 30%;
-    }
-
-    h3 {
-      color: $primary-blue;
-      margin-bottom: 10px;
-    }
-
-    h5 {
-      opacity: .8;
-      margin-bottom: 5px;
-      line-height: 1rem;
-    }
+    transform: scale(1.05);
   }
 }

@@ -3,7 +3,7 @@
 
 html {
   // add site level custom font here, if applicable
-  font-family: 'Nunito', 'sans-serif';
+  font-family: 'Poppins', 'sans-serif';
   @include smooth-font;
   @include font-size-reset;
   color: $textPrimary;
@@ -14,7 +14,7 @@ html {
 
 body {
   // add site level custom font here, if applicable
-  font-family: 'Nunito', 'sans-serif';
+  font-family: 'Poppins', 'sans-serif';
   @include smooth-font;
   @include font-size-reset;
   color: $textPrimary;

@@ -40,17 +40,8 @@
 }
 
 
-.dotCircle  .itemDot6{
-	background: url('../../images/work/google.jpg') no-repeat center center;
-  -webkit-background-size: contain;
-  -moz-background-size: contain;
-  -o-background-size: contain;
-  background-size: contain;
-}
-
-
 .dotCircle  .itemDot5{
-	background: url('../../images/work/kitu.jpg') no-repeat center center;
+	background: url('../../images/work/google.jpg') no-repeat center center;
   -webkit-background-size: contain;
   -moz-background-size: contain;
   -o-background-size: contain;
@@ -161,8 +152,8 @@
 		}
 
 		.contentCircle{
-			width: 22vw;
-			height: 22vw;
-			top: 9vw;
+			width: 18vw;
+			height: 18vw;
+			top: 11vw;
 		}
 	}

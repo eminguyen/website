@@ -53,12 +53,12 @@ export const handleClick = function(event) {
 
   const dotCircles = document.getElementsByClassName('dotCircle');
   for (let item of dotCircles) {
-    item.style.transform = "rotate("+(360-(i-1)*60 + 360*rounds)+"deg)";
+    item.style.transform = "rotate("+(360-(i-1)*72 + 360*rounds)+"deg)";
   }
 
   const itemDots = document.getElementsByClassName('itemDot');
   for (let item of itemDots) {
-    item.style.transform = "rotate("+((i-1)*60 - 360*rounds)+"deg)";
+    item.style.transform = "rotate("+((i-1)*72 - 360*rounds)+"deg)";
   }
   if(timeout) {
     clearTimeout(timeout);
@@ -73,8 +73,8 @@ const autoSpin = function () {
   interval = setInterval(function() {
     let dataTab = document.getElementsByClassName('itemDot active')[0].getAttribute('data-tab');
     if(dataTab < 1 || i < 1) {
-      dataTab = 6;
-      i = 6;
+      dataTab = 5;
+      i = 5;
       rounds += 1;
     }
 
@@ -88,12 +88,12 @@ const autoSpin = function () {
 
     const dotCircles = document.getElementsByClassName('dotCircle');
     for (let item of dotCircles) {
-      item.style.transform = "rotate("+(360-(i)*60 + 360*rounds)+"deg)";
+      item.style.transform = "rotate("+(360-(i)*72 + 360*rounds)+"deg)";
     }
 
     const itemDots = document.getElementsByClassName('itemDot');
     for (let item of itemDots) {
-      item.style.transform = "rotate("+((i)*60 - 360*rounds)+"deg)";
+      item.style.transform = "rotate("+((i)*72 - 360*rounds)+"deg)";
     }
 
     console.log(rounds)

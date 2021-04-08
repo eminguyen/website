@@ -2,17 +2,14 @@ import React from 'react';
 import styles from './ProjectCard.module.scss';
 import './static-styles.css';
 
-const Projects = ({link, github, img, children}) => (
-  <div className={styles.projectcard}>
-    <div className={styles.background} id={img}></div>
-    <div className={styles.links}>
-      <a className={styles.link} href={link} />
-      <a className={styles.github} href={github} />
+const Projects = ({link, img, title, subtitle}) => (
+  <a href={link}>
+    <div className={styles.projectcard}>
+      <img src={img} alt="cover" width="350px" height="300px" />
+      <p className={styles.title}><strong>{title}</strong></p>
+      <p>{subtitle}</p>
     </div>
-    <div className={styles.text}>
-      {children}
-    </div>
-  </div>
+  </a>
 )
 
 export default Projects;

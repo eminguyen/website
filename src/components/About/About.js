@@ -11,27 +11,18 @@ const returnFalse = (e) => {
 const About = ( { id }) => (
   <div className={styles.about} id="about">
     <div className={styles.whitebar}/>
-    <h1>Hi I&#39;m Emily!</h1>
+    <h1>hi i&#39;m emily!</h1>
     <div className={styles.content}>
       <div className={styles.image}></div>
       <div className={styles.text}>
-        <p>But you can call me Emi. When I was younger, I was
-        called Antony but things change. What hasn't changed is my love for
-        computers. My parents sacrificed most of their savings so that I could have
-        a PC at age 3.   Now, I'm a software engineer who wants to pay it forward by
+        <p>but you can call me emi. when I was younger, i was
+        called antony but things change. what hasn't changed is my love for
+        computers. my immigrant parents sacrificed most of their savings so that i could have
+        a computer at age 3. now, i'm a software engineer who wants to pay it forward by
         providing others with opportunities to code.
-        I aim to combine my love of the web with my eye for design in order to
-        create beautiful applications and helpful tools. Aside from that, I also
-        spend my time teaching Java at local high schools, facilitating engineering summer camps,
-        organizing STEM fairs, and hosting web development workshops. In my spare time, I like to climb
-        League duo queue with my cousin and down gallons of boba with my best friends.
-        I also often drive hundreds of miles to spend time with my siblings
-        and I run thousands more to explore new places. To compensate for
-        the damage to my feet, you'll often find me
-        flexing on other people with my Crocs and Heelys.
-        <br/>  <br/>
-        I’m always seeking new opportunities. If you&#39;d like to work together, I
-        accept payment in the forms of money and Korean BBQ.</p>
+        in my free time i run marathons, climb league solo queue, and drink loads of boba.
+        </p>
+        <br />
         <form>
           <a href="mailto:emily@computer.org">
             Email

@@ -35,102 +35,60 @@ class Work extends React.Component {
               <span className="itemDot itemDot5" data-tab="5" onClick={handleClick}>
                 <span className="forActive"></span>
               </span>
-              <span className="itemDot itemDot6" data-tab="6" onClick={handleClick}>
-                <span className="forActive"></span>
-              </span>
             </div>
 
             <div className="contentCircle">
 
-              <div className="CirItem active CirItem6">
-                Google
+              <div className="CirItem active CirItem5">
+                google
                 <br />
-                Software Engineering Intern
-              </div>
-              <div className="CirItem CirItem5">
-                Kitu Systems
-                <br />
-                Software Engineering Intern
+                software engineer
               </div>
               <div className="CirItem CirItem4">
-                ACM UC San Diego
+                acm ucsd
                 <br/>
-                Founding President
+                founder & president
               </div>
               <div className="CirItem CirItem3">
-                IEEE UC San Diego
+                ieee ucsd 
                 <br />
-                Vice Chair External
+                vice president
               </div>
               <div className="CirItem CirItem2">
-                TEALS
+                teals
                 <br />
-                AP Computer Science TA
+                computer science ta
               </div>
               <div className="CirItem CirItem1">
-                UC San Diego
+                ucsd
                 <br />
-                Computer Engineering B.S.
-                <br />
-                Design Minor
+                computer engineering bs
               </div>
             </div>
           </div>
           <div className={styles.description}>
-            <div className="text active text6">
-              As an intern on Google&#39;s Education team, I built two projects.
-              First, I added four features to a video player utilized by
-              100,000+ people. This video player is currently available on
-              Google&#39;s Machine Learning Crash Course. Secondly, I developed
-              and designed an early prototype of a Javascript event player for
-              the Scratch block programming language. I also wrote unit test and
-              maintained design documentation for code upkeep.
-            </div>
-            <div className="text text5">
-              I spent six months working on Kitu System&#39;s Cloud servers.
-              There, I refactored much of their Node.js code and developed a
-              module housing most of the company&#39;s shared code between
-              teams. I also wrote unit and integration tests with mocks, spies,
-              and stubs through a combination of Javascript testing tools
-              including Mocha, Sinon, and Chai. This was also my first exposure
-              to Agile. We had daily Scrum meetings and utilized Atlassian Jira
-              / Bitbucket with Git as task management and version control tools.
+            <div className="text active text5">
+            i am an incoming software engineer on the google cloud team. previously, i did two swe internships at google. at the first internship, i created the video player for google's machine learning crash course, which has been used by over 15 million people. i also worked on a prototype for a new feature for mit scratch. i also previously worked on google's vision ai team, where i helped to launch a new feature - visual inspection for the manufacturing industry.
             </div>
             <div className="text text4">
-              I founded a Chapter of the Association for Computing Machinery,
-              the world&#39;s largest computing society, at UC San Diego. In six
-              months prior to launch, I put together a team of 19 Board members
-              and recruited over 100+ members. We&#39;re aiming to launch this
-              upcoming Fall with 40+ events for an estimated 400+ members.
-              As ACM President, I&#39;ve also been a strong proponent for
-              collaboration, initiating meetings with many other student
-              organizations and ACM Chapters.
+            i founded uc san diego's largest technology organization. i recruited 30 board members and established 5 teams which oversaw the organization's logistics for 120+ events, marketing campaigns to 40,000+ students, and expansion to 1500+ registered members. i also led front end development for the organization's initial membership portal iteration, which has, to date, attracted over 100,000 page visits. within a single year of my leadership, the non-profit saw 25,000% growth in membership, launched and acquired 4 child organizations, and received the campus's award for new student organization of the year.
             </div>
             <div className="text text3">
-              I was an executive Board member for UC San Diego&#39;s largest
-              engineering organization and IEEE&#39;s third largest branch, with
-              600+ members. Over the course of a year, I oversaw a team of 6
-              that hosted 40+ events which impacted 1000+ people. These events
-              included community socials, outreach STEM fairs, coding workshops,
-              and professional growth talks. Prior to my position as IEEE
-              VCE, I was also its Technical Chair and a Staff Member. In those
-              roles, I taught college students engineering topics like Python
-              and Arduino and I taught younger students topics like HTML and
-              CSS.
+            i was an executive board member for the second largest ieee branch in the nation, and at the time, california's largest engineering organization. i regularly traveled to ieee conferences around the nation to foster and maintain relations with over 30 branches across the country. i also oversaw a team of 6 officers who hosted over 40 technical workshops, professional development talks, and community stem fairs. on the side, i hosted 10 workshops to over 500 college students, on topics such as arduino, python, and web development.
             </div>
             <div className="text text2">
-              I briefly taught AP Computer Science A at Chula Vista High School.
-              There, I mentored 30+ high school students on Java in order to
-              prepare them for their test. Also pretty proud of myself because
-              I taught a pretty cool lesson on for loops where I had the teacher
+              i briefly taught ap computer science at chula vista high school.
+              there, i mentored 30+ high school students on java in order to
+              prepare them for their test. also pretty proud of myself because
+              i taught a pretty cool lesson on for loops where i had the teacher
               run into a wall.
             </div>
             <div className="text text1">
-              I am currently a student at UC San Diego, expected to graduate in
-              2021. I am currently majoring in Computer Engineering, having
-              taken classes on topics like Software Engineering, Data
-              Structures, and Algorithms. I&#39;m also currently minoring in
-              Design because I believe that engineers should not only be
+              i am currently a student at uc san diego, expected to graduate in
+              2021. i am currently majoring in computer engineering, having
+              taken classes on topics like software engineering, data
+              structures, and algorithms. i&#39;m also currently minoring in
+              design because i believe that engineers should not only be
               concerned about how their applications work, but how users work
               with their applications as well.
             </div>
